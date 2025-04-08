@@ -1,22 +1,17 @@
 {
-  "scripts": {
-    "build": "npm install --legacy-peer-deps && npm run build"
-  }
-}
-{
   "name": "uniwa_js",
   "version": "1.0.0",
   "scripts": {
     "dev": "rollup -c -w",
-    "build": "rollup -c",
+    "build": "npm install --legacy-peer-deps && rollup -c",  // Χρησιμοποιούμε το --legacy-peer-deps κατά το build
     "start": "sirv public --single"
   },
   "devDependencies": {
-    "rollup": "^2.0.0",  // Σιγουρευόμαστε ότι χρησιμοποιούμε την έκδοση 2.x του Rollup για συμβατότητα με τα plugins
+    "rollup": "^3.0.0",  // Αλλαγή σε Rollup 3.x για συμβατότητα με τα νεότερα plugins
     "rollup-plugin-css-only": "^4.0.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.2",  // Έκδοση του terser που είναι συμβατή με το Rollup 2.x
+    "rollup-plugin-terser": "^7.0.2",  // Η ίδια έκδοση του terser, που είναι συμβατή με Rollup 2.x, αν και χρησιμοποιούμε Rollup 3.x
     "svelte": "^3.0.0"
   },
   "dependencies": {
