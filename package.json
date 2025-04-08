@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "build": "npm install --legacy-peer-deps && rollup -c"
+  }
+}
+{
   "name": "uniwa_js",
   "version": "1.0.0",
   "scripts": {
