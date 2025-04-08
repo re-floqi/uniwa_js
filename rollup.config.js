@@ -1,6 +1,6 @@
 import svelte from 'rollup-plugin-svelte';
 import css from 'rollup-plugin-css-only';
-import { terser } from 'rollup-plugin-terser';
+import { terser } from '@rollup/plugin-terser';  // Εισάγουμε το νέο terser plugin για Rollup 3.x
 
 export default {
   input: 'src/main.js',
@@ -17,7 +17,7 @@ export default {
       }
     }),
     css({ output: 'bundle.css' }),
-    terser()
+    terser()  // Εφαρμόζουμε το terser plugin για την ελαχιστοποίηση του κώδικα
   ],
   watch: {
     clearScreen: false
