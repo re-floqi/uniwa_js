@@ -1,4 +1,7 @@
 {
+  "engines": {
+  "node": "16.x"
+}
     "name": "uniwa_js",
     "version": "1.0.0",
     "scripts": {
