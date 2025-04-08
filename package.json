@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "build": "npm install --legacy-peer-deps && npm run build"
+  }
+}
+{
   "name": "uniwa_js",
   "version": "1.0.0",
   "scripts": {
