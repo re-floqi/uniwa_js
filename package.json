@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "rollup -c -w",
-    "build": "npm install --legacy-peer-deps && rollup -c",  // Προσθήκη legacy-peer-deps για να παρακάμψει την σύγκρουση
+    "build": "npm install --legacy-peer-deps && rollup -c",  // Χρησιμοποιούμε το --legacy-peer-deps κατά το build
     "start": "sirv public --single"
   },
   "devDependencies": {
-    "rollup": "^3.0.0",  // Χρησιμοποιούμε Rollup 3.x για την υποστήριξη νέων plugins
+    "rollup": "^3.0.0",  // Χρησιμοποιούμε Rollup 3.x για συμβατότητα με τα νεότερα plugins
     "rollup-plugin-css-only": "^4.0.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
