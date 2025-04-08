@@ -1,24 +1,23 @@
 {
+  "name": "uniwa_js",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "start": "sirv public --single"
+  },
+  "devDependencies": {
+    "rollup": "^2.0.0",  // Σιγουρευόμαστε ότι χρησιμοποιούμε την έκδοση 2.x του Rollup για συμβατότητα με τα plugins
+    "rollup-plugin-css-only": "^4.0.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.2",  // Έκδοση του terser που είναι συμβατή με το Rollup 2.x
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "sirv-cli": "^2.0.0"
+  },
   "engines": {
-  "node": "16.x"
-}
-    "name": "uniwa_js",
-    "version": "1.0.0",
-    "scripts": {
-      "dev": "rollup -c -w",
-      "build": "rollup -c",
-      "start": "sirv public --single"
-    },
-    "devDependencies": {
-      "rollup": "^3.0.0",
-      "rollup-plugin-css-only": "^4.0.0",
-      "rollup-plugin-livereload": "^2.0.0",
-      "rollup-plugin-svelte": "^7.0.0",
-      "rollup-plugin-terser": "^7.0.0",
-      "svelte": "^3.0.0"
-    },
-    "dependencies": {
-      "sirv-cli": "^2.0.0"
-    }
+    "node": "16.x"  // Χρησιμοποιούμε Node.js έκδοση 16.x για να είναι συμβατή με τα εξαρτήματα
   }
-  
+}
