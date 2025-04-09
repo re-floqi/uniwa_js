@@ -2,29 +2,25 @@
   "name": "uniwa_js",
   "version": "1.0.0",
   "scripts": {
-    "dev": "concurrently \"rollup -c -w\" \"tsc --watch\"",
-    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "build": "npm install --legacy-peer-deps && rollup -c",
     "start": "sirv public --single",
     "tsc": "tsc"
   },
   "devDependencies": {
     "rollup": "^3.0.0",
-    "@rollup/plugin-terser": "^1.0.0",
-    "@rollup/plugin-typescript": "^11.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-commonjs": "^25.0.0",
     "rollup-plugin-css-only": "^4.0.0",
     "rollup-plugin-livereload": "^2.0.0",
-    "svelte-preprocess": "^5.0.0",
     "rollup-plugin-svelte": "^7.0.0",
-    "svelte": "^4.0.0",
-    "typescript": "^5.0.0",
-    "concurrently": "^8.0.0"
+    "@rollup/plugin-terser": "^1.0.0",
+    "svelte": "^3.0.0",
+    "typescript": "^4.0.0",
+    "@rollup/plugin-typescript": "^8.0.0"
   },
   "dependencies": {
     "sirv-cli": "^2.0.0"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": "16.x"
   }
 }
