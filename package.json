@@ -2,24 +2,28 @@
   "name": "uniwa_js",
   "version": "1.0.0",
   "scripts": {
-    "dev": "rollup -c -w",
-    "build": "npm install --legacy-peer-deps && rollup -c",  // Χρησιμοποιούμε το --legacy-peer-deps κατά το build
+    "dev": "concurrently \"rollup -c -w\" \"tsc --watch\"",
+    "build": "rollup -c",
     "start": "sirv public --single",
-    "tsc": "tsc"  // Προσθήκη script για TypeScript
+    "tsc": "tsc"
   },
   "devDependencies": {
-    "rollup": "^3.0.0",  // Χρησιμοποιούμε Rollup 3.x για συμβατότητα με τα νεότερα plugins
+    "rollup": "^3.0.0",
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
     "rollup-plugin-css-only": "^4.0.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
-    "@rollup/plugin-terser": "^1.0.0",  // Χρησιμοποιούμε το νέο terser plugin για Rollup 3.x
-    "svelte": "^3.0.0",
-    "typescript": "^4.0.0"  // Προσθήκη TypeScript
+    "svelte": "^4.0.0",
+    "typescript": "^5.0.0",
+    "concurrently": "^8.0.0"
   },
   "dependencies": {
     "sirv-cli": "^2.0.0"
   },
   "engines": {
-    "node": "16.x"  // Χρησιμοποιούμε Node.js έκδοση 16.x για να είναι συμβατή με τα εξαρτήματα
+    "node": ">=18.x"
   }
 }
