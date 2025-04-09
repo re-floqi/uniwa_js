@@ -1,6 +1,7 @@
 {
+{
   "name": "uniwa_js",
-  "version": "1.0.0"
+  "version": "1"
 },
   "scripts": {
     "dev": "rollup -c -w",
@@ -24,4 +25,5 @@
   "engines": {
     "node": "16.x"
   }
+}
 }
